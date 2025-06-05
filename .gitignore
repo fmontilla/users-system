@@ -1,6 +1,13 @@
 # Dependencies
 node_modules/
 */node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # Environment variables
 .env
@@ -8,11 +15,14 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+.env*
 
 # Build outputs
 dist/
 build/
 .next/
+/.next/
+/out/
 
 # Logs
 logs
@@ -20,6 +30,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # Runtime data
 pids
@@ -29,6 +40,7 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage/
+/coverage
 
 # nyc test coverage
 .nyc_output
@@ -47,9 +59,6 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
-
-# dotenv environment variables file
-.env
 
 # next.js build output
 .next
@@ -77,10 +86,22 @@ jspm_packages/
 
 # OS
 .DS_Store
+*.pem
 Thumbs.db
 
 # Prisma
 backend/prisma/migrations/
+/generated/prisma
+
+# Testing
+/coverage
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
 # Temporary files
 *.tmp
