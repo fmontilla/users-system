@@ -91,7 +91,8 @@ Thumbs.db
 
 # Prisma
 backend/prisma/migrations/
-/generated/prisma
+backend/generated/
+/generated/
 
 # Testing
 /coverage
